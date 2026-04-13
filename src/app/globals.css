@@ -1,9 +1,7 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+/* Tailwind v4 class-based dark mode (used by next-themes) */
+@variant dark (&:where(.dark, .dark *));
 
 @theme inline {
   --color-background: var(--background);
@@ -12,15 +10,46 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Sage / Masters green palette.
+   Plain :root declarations come after Tailwind's @import defaults in the
+   cascade — these override the built-in neutral scale. */
+:root {
+  --background: #eef6eb;
+  --foreground: #0e2318;
+
+  --color-neutral-50:  #eef6eb;
+  --color-neutral-100: #d4e8d0;
+  --color-neutral-200: #b0cfb8;
+  --color-neutral-300: #82ae8e;
+  --color-neutral-400: #5a8f6e;
+  --color-neutral-500: #3f6b50;
+  --color-neutral-600: #2f5440;
+  --color-neutral-700: #223d2f;
+  --color-neutral-800: #1a2f24;
+  --color-neutral-900: #112218;
+  --color-neutral-950: #091510;
+}
+
+.dark {
+  --background: #0e2318;
+  --foreground: #f0f7ed;
+
+  /* Brighter muted text in dark mode so it reads clearly on dark green */
+  --color-neutral-400: #8fb89e;
+  --color-neutral-500: #6a9e7a;
+}
+
+/* Masters green accent — used for the section divider line and active nav */
+:root {
+  --accent: #C49A3C;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 }
