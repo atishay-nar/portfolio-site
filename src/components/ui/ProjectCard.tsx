@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaGithub, FaArrowUpRightFromSquare } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa6";
 import type { Project } from "@/types";
 
 interface ProjectCardProps {
@@ -37,10 +37,13 @@ export default function ProjectCard({ project }: ProjectCardProps) {
                 href={project.liveUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={`Live demo: ${project.title}`}
-                className="text-[var(--accent)] hover:opacity-70 transition-opacity"
+                aria-label={`Live site: ${project.title}`}
+                className="hover:opacity-70 transition-opacity"
               >
-                <FaArrowUpRightFromSquare className="w-3.5 h-3.5" />
+                <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="16" height="16" rx="3" fill="#C49A3C"/>
+                  <text x="8" y="11.5" fontFamily="Georgia, serif" fontSize="7" fontWeight="700" fill="#0e2318" textAnchor="middle">RS</text>
+                </svg>
               </a>
             )}
           </div>

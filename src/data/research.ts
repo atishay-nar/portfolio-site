@@ -4,8 +4,8 @@ export const research: ResearchPaper[] = [
   {
     id: "shapley-jp",
     title: "Weighted Shapley Value Without Symmetry or Exogenous Weights",
-    authors: "Atishay Narayanan",
-    venue: "Princeton University — Junior Paper, Mathematics",
+    authors: "Atishay Narayanan & Faruk Gul",
+    venue: "Mathematics Junior Independent Work, Princeton University",
     year: 2026,
     status: "in-progress",
     abstract:
@@ -15,8 +15,8 @@ export const research: ResearchPaper[] = [
   {
     id: "quantum-gpt",
     title: "Quantum-Classical Hybrid GPT Models for Image Generation",
-    authors: "Atishay Narayanan",
-    venue: "SenSIP Lab, Arizona State University",
+    authors: "Atishay Narayanan, Gennaro De Luca, and Andreas Spanias",
+    venue: "SenSIP REU, Arizona State University",
     year: 2025,
     abstract:
       "Developed Quantum-Classical hybrid GPT architectures for image generation, integrating a novel Quantum Mixed-State Attention Network. Demonstrated the feasibility of quantum self-attention within transformer models and achieved a 10% improvement in PSNR over purely classical baselines using PyTorch and Pennylane.",
@@ -27,7 +27,7 @@ export const research: ResearchPaper[] = [
     id: "confirmation-bias",
     title: "Advantages of Confirmation Bias in Bayesian Inference",
     authors: "Atishay Narayanan",
-    venue: "Princeton University — Independent Research",
+    venue: "PSY 360 Research Project, Princeton University",
     year: 2025,
     abstract:
       "Designed and simulated Bayesian agents with asymmetric learning rates to model confirmation bias in learning stationary and non-stationary Bernoulli distributions. Evaluated agents on convergence speed and accuracy via MSE over 1000+ trials. Demonstrated that low-degree confirmation bias (10–25%) improves short-term convergence but degrades long-term accuracy, showing that its advantages are time-scale dependent.",

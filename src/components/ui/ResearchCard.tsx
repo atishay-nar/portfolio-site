@@ -10,12 +10,6 @@ export default function ResearchCard({ paper }: ResearchCardProps) {
     <div className="p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/50 hover:border-neutral-300 dark:hover:border-neutral-700 transition-colors">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
         <div className="flex items-start gap-2">
-          {paper.status === "in-progress" && (
-            <span className="relative flex h-2 w-2 shrink-0 mt-1.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style={{ backgroundColor: "var(--accent)" }} />
-              <span className="relative inline-flex rounded-full h-2 w-2" style={{ backgroundColor: "var(--accent)" }} />
-            </span>
-          )}
           <h3 className="font-medium text-sm text-[var(--foreground)] leading-snug">
             {paper.title}
           </h3>
@@ -45,9 +39,10 @@ export default function ResearchCard({ paper }: ResearchCardProps) {
             href={paper.paperUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-xs text-neutral-500 dark:text-neutral-400 hover:text-[var(--foreground)] transition-colors"
+            className="inline-flex items-center gap-1.5 text-xs hover:opacity-70 transition-opacity"
+            style={{ color: "var(--accent)" }}
           >
-            <FaArrowUpRightFromSquare className="w-3 h-3 text-[var(--accent)]" />
+            <FaArrowUpRightFromSquare className="w-3 h-3" />
             Paper
           </a>
         )}
@@ -63,6 +58,15 @@ export default function ResearchCard({ paper }: ResearchCardProps) {
           </a>
         )}
       </div>
+      {paper.status === "in-progress" && (
+        <div className="flex items-center gap-2 mt-3">
+          <span className="relative flex h-2 w-2 shrink-0">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full opacity-75" style={{ backgroundColor: "var(--accent)" }} />
+            <span className="relative inline-flex rounded-full h-2 w-2" style={{ backgroundColor: "var(--accent)" }} />
+          </span>
+          <span className="text-xs" style={{ color: "var(--accent)" }}>In Progress</span>
+        </div>
+      )}
     </div>
   );
 }
