@@ -1,6 +1,7 @@
 "use client";
 
 import { useForm, ValidationError } from "@formspree/react";
+import { FaCircleCheck } from "react-icons/fa6";
 import { FORMSPREE_ID } from "@/lib/constants";
 
 export default function ContactForm() {
@@ -8,11 +9,16 @@ export default function ContactForm() {
 
   if (state.succeeded) {
     return (
-      <div className="p-6 rounded-xl border border-neutral-200 dark:border-neutral-800 text-center">
-        <p className="font-medium text-sm">Message sent!</p>
-        <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
-          Thanks for reaching out — I&apos;ll get back to you soon.
-        </p>
+      <div className="p-8 rounded-xl border border-neutral-200 dark:border-neutral-800 flex flex-col items-center gap-3 text-center">
+        <div className="w-10 h-10 rounded-full flex items-center justify-center" style={{ backgroundColor: "color-mix(in srgb, var(--accent) 15%, transparent)" }}>
+          <FaCircleCheck className="w-5 h-5" style={{ color: "var(--accent)" }} />
+        </div>
+        <div>
+          <p className="font-semibold text-sm">Message sent!</p>
+          <p className="text-sm text-neutral-500 dark:text-neutral-400 mt-1">
+            Thanks for reaching out — I&apos;ll get back to you soon.
+          </p>
+        </div>
       </div>
     );
   }
