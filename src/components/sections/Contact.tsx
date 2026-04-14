@@ -8,8 +8,7 @@ export default function Contact() {
   return (
     <SectionWrapper id="contact">
       <SectionHeading
-        title="Get in touch"
-        subtitle="I'm always open to interesting conversations and opportunities."
+        title="Contact Me"
       />
       <div className="grid md:grid-cols-5 gap-12">
         <div className="md:col-span-3">

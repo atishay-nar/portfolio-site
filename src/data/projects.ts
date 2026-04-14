@@ -7,6 +7,7 @@ export const projects: Project[] = [
     description:
       "Built a mid-frequency momentum signal trading system in Python with 20+ years of historical DJIA data. Designed a backtester to evaluate Sharpe ratios, drawdown, and turnover across multiple strategies and signals.",
     techTags: ["Python", "Pandas", "Backtesting", "Finance"],
+    githubUrl: "https://github.com/atishay-nar/momentum",
     featured: true,
   },
   {

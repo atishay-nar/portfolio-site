@@ -18,7 +18,6 @@ export default function Projects() {
     <SectionWrapper id="projects">
       <SectionHeading
         title="Projects"
-        subtitle="Things I've built, shipped, or tinkered with."
       />
       <motion.div
         variants={containerVariants}

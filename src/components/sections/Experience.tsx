@@ -8,7 +8,6 @@ export default function Experience() {
     <SectionWrapper id="experience">
       <SectionHeading
         title="Work Experience"
-        subtitle="Where I've worked."
       />
       <div>
         {experience.map((job, i) => (

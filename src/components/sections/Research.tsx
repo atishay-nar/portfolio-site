@@ -8,7 +8,6 @@ export default function Research() {
     <SectionWrapper id="research">
       <SectionHeading
         title="Research"
-        subtitle="Papers, projects, and academic work."
       />
       <div className="grid gap-5">
         {research.map((paper) => (
