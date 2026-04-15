@@ -6,7 +6,7 @@ import { SOCIAL_LINKS } from "@/lib/constants";
 
 export default function Contact() {
   return (
-    <SectionWrapper id="contact">
+    <SectionWrapper id="contact" tinted>
       <SectionHeading
         title="Contact Me"
       />

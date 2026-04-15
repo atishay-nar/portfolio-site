@@ -7,7 +7,7 @@ interface ResearchCardProps {
 
 export default function ResearchCard({ paper }: ResearchCardProps) {
   return (
-    <div className="p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/50 hover:border-neutral-300 dark:hover:border-neutral-700 transition-colors">
+    <div className="p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/50 shadow-[var(--shadow-sm)] hover:border-neutral-300 dark:hover:border-neutral-700 hover:shadow-[var(--shadow-card-hover)] transition-[border-color,box-shadow] duration-200">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-2 mb-2">
         <div className="flex items-start gap-2">
           <h3 className="font-medium text-sm text-[var(--foreground)] leading-snug">

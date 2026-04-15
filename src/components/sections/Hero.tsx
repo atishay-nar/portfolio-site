@@ -9,7 +9,12 @@ import { HiArrowDownTray } from "react-icons/hi2";
 
 export default function Hero() {
   return (
-    <SectionWrapper id="hero" className="pt-32">
+    <SectionWrapper id="hero" className="pt-32 relative">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 -z-10"
+        style={{ background: "var(--hero-glow)" }}
+      />
       {/* Name & tagline */}
       <div className="mb-10">
         <h1 className="text-4xl sm:text-5xl font-semibold tracking-tight mb-3">

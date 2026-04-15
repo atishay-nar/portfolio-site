@@ -5,7 +5,7 @@ import { research } from "@/data/research";
 
 export default function Research() {
   return (
-    <SectionWrapper id="research">
+    <SectionWrapper id="research" tinted>
       <SectionHeading
         title="Research"
       />

@@ -15,7 +15,7 @@ export default function ProjectCard({ project }: ProjectCardProps) {
         hidden: { opacity: 0, y: 20 },
         visible: { opacity: 1, y: 0 },
       }}
-      className="group flex flex-col p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/50 hover:border-neutral-300 dark:hover:border-neutral-700 transition-colors h-full"
+      className="group flex flex-col p-5 rounded-xl border border-neutral-200 dark:border-neutral-800 bg-neutral-50 dark:bg-neutral-900/50 shadow-[var(--shadow-sm)] hover:border-neutral-300 dark:hover:border-neutral-700 hover:shadow-[var(--shadow-card-hover)] transition-[border-color,box-shadow] duration-200 h-full"
     >
       <div className="flex-1">
         <div className="flex items-start justify-between gap-2 mb-2">

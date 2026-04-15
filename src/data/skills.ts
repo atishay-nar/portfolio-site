@@ -7,6 +7,7 @@ export const skills: Skill[] = [
   { label: "JavaScript", iconKey: "SiJavascript", category: "language" },
   { label: "SQL", iconKey: "SiMysql", category: "language" },
   { label: "HTML / CSS", iconKey: "SiHtml5", category: "language" },
+  { label: "MATLAB", iconKey: "TbMatrix", category: "language" },
 
   // Libraries
   { label: "PyTorch", iconKey: "SiPytorch", category: "framework" },

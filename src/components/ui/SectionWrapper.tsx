@@ -7,6 +7,7 @@ interface SectionWrapperProps {
   id: string;
   className?: string;
   children: React.ReactNode;
+  tinted?: boolean;
 }
 
 const variants: Variants = {
@@ -18,20 +19,22 @@ const variants: Variants = {
   },
 };
 
-export default function SectionWrapper({ id, className = "", children }: SectionWrapperProps) {
+export default function SectionWrapper({ id, className = "", children, tinted }: SectionWrapperProps) {
   const ref = useRef<HTMLElement>(null);
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <motion.section
-      id={id}
-      ref={ref}
-      variants={variants}
-      initial="hidden"
-      animate={inView ? "visible" : "hidden"}
-      className={`py-20 max-w-5xl mx-auto px-6 ${className}`}
-    >
-      {children}
-    </motion.section>
+    <div style={tinted ? { background: "var(--section-tint)" } : undefined}>
+      <motion.section
+        id={id}
+        ref={ref}
+        variants={variants}
+        initial="hidden"
+        animate={inView ? "visible" : "hidden"}
+        className={`py-20 max-w-5xl mx-auto px-6 ${className}`}
+      >
+        {children}
+      </motion.section>
+    </div>
   );
 }

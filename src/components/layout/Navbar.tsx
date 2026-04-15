@@ -11,7 +11,7 @@ export default function Navbar() {
   );
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-[var(--background)]/80 border-b border-neutral-200 dark:border-neutral-800">
+    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-[var(--background)]/80 border-b border-neutral-200 dark:border-neutral-800 shadow-[var(--shadow-sm)]">
       <nav className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
         <Link
           href="#hero"
