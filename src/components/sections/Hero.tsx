@@ -64,6 +64,7 @@ export default function Hero() {
                 period={edu.period}
                 location={edu.location}
                 notes={edu.notes}
+                logo={edu.logo}
                 isLast={i === education.length - 1}
               />
             ))}

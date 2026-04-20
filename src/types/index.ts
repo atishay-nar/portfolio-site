@@ -44,6 +44,7 @@ export interface Education {
   period: string;
   location: string;
   notes?: string;
+  logo?: string;
 }
 
 export interface NavLink {
